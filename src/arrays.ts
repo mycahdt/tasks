@@ -8,11 +8,14 @@ export function bookEndList(numbers: number[]): number[] {
     let firstAndLast = [];
 
     firstAndLast[0] = numbers[0];
-    numbers.length === 1
-        ? (firstAndLast[1] = numbers[0])
-        : (firstAndLast[1] = numbers[numbers.length - 1]);
-
-    numbers.length === 0 ? (firstAndLast = []) : firstAndLast;
+    if (numbers.length === 1) {
+        firstAndLast[1] = numbers[0];
+    } else {
+        firstAndLast[1] = numbers[numbers.length - 1];
+    }
+    if (numbers.length === 0) {
+        firstAndLast = [];
+    }
     return firstAndLast;
 }
 
@@ -128,10 +131,9 @@ export function injectPositive(values: number[]): number[] {
         0
     );
 
-    let myVals = [...values];
-    indOfNeg !== -1
-        ? myVals.splice(indOfNeg + 1, 0, sum)
-        : (myVals = [...values, sum]);
+    const myVals = [...values];
+
+    indOfNeg !== -1 ? myVals.splice(indOfNeg + 1, 0, sum) : myVals.push(sum);
 
     return myVals;
 }
