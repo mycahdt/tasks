@@ -1,6 +1,3 @@
-import { arrayBuffer } from "stream/consumers";
-import { formatDiagnosticsWithColorAndContext } from "typescript";
-
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -12,10 +9,10 @@ export function bookEndList(numbers: number[]): number[] {
 
     firstAndLast[0] = numbers[0];
     numbers.length === 1
-        ? firstAndLast[1] = numbers[0]
-        : firstAndLast[1] = numbers[numbers.length - 1];
+        ? (firstAndLast[1] = numbers[0])
+        : (firstAndLast[1] = numbers[numbers.length - 1]);
 
-    numbers.length === 0 ? firstAndLast = [] : firstAndLast;
+    numbers.length === 0 ? (firstAndLast = []) : firstAndLast;
     return firstAndLast;
 }
 
@@ -93,26 +90,6 @@ export function allRGB(colors: string[]): boolean {
     );
     const flag = colors.length === withoutRBG.length ? true : false;
     return flag;
-    /*
-    const withoutRBG = colors.filter(
-        (color: string): boolean =>
-            !color.includes("red") &&
-            !color.includes("blue") &&
-            !color.includes("green")
-    );
-    const flag = colors.length === withoutRBG.length;
-    return flag;*/
-
-    /*
-    const onlyRBG = colors.every(
-        (color: string): boolean =>
-            color.includes("red") ||
-            color.includes("blue") ||
-            color.includes("green")
-    );
-    // eslint-disable-next-line no-extra-parens
-    //colors.length === 0 ? (onlyRBG = true) : onlyRBG;
-    return onlyRBG;*/
 }
 
 /**
@@ -154,7 +131,7 @@ export function injectPositive(values: number[]): number[] {
     let myVals = [...values];
     indOfNeg !== -1
         ? myVals.splice(indOfNeg + 1, 0, sum)
-        : myVals = [...values, sum];
+        : (myVals = [...values, sum]);
 
     return myVals;
 }
