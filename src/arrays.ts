@@ -8,14 +8,14 @@ import { formatDiagnosticsWithColorAndContext } from "typescript";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const firstAndLast = [];
+    let firstAndLast = [];
 
-    numbers.length === 0
-        ? (firstAndLast[0] = undefined)
-        : (firstAndLast[0] = numbers[0]);
-    numbers.length == 0
-        ? (firstAndLast[0] = undefined)
+    firstAndLast[0] = numbers[0];
+    numbers.length === 1
+        ? (firstAndLast[1] = numbers[0])
         : (firstAndLast[1] = numbers[numbers.length - 1]);
+
+    numbers.length === 0 ? (firstAndLast = []) : firstAndLast;
     return firstAndLast;
 }
 
@@ -87,15 +87,32 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    let onlyRBG = colors.every(
+    const withoutRBG = colors.filter(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    const flag = colors.length === withoutRBG.length ? true : false;
+    return flag;
+    /*
+    const withoutRBG = colors.filter(
+        (color: string): boolean =>
+            !color.includes("red") &&
+            !color.includes("blue") &&
+            !color.includes("green")
+    );
+    const flag = colors.length === withoutRBG.length;
+    return flag;*/
+
+    /*
+    const onlyRBG = colors.every(
         (color: string): boolean =>
             color.includes("red") ||
             color.includes("blue") ||
             color.includes("green")
     );
     // eslint-disable-next-line no-extra-parens
-    colors.length === 0 ? (onlyRBG = true) : onlyRBG;
-    return onlyRBG;
+    //colors.length === 0 ? (onlyRBG = true) : onlyRBG;
+    return onlyRBG;*/
 }
 
 /**
