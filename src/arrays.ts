@@ -1,4 +1,4 @@
-import { arrayBuffer } from "stream/consumers"
+import { arrayBuffer } from "stream/consumers";
 import { formatDiagnosticsWithColorAndContext } from "typescript";
 
 /**
@@ -12,10 +12,10 @@ export function bookEndList(numbers: number[]): number[] {
 
     firstAndLast[0] = numbers[0];
     numbers.length === 1
-        ? (firstAndLast[1] = numbers[0])
-        : (firstAndLast[1] = numbers[numbers.length - 1]);
+        ? firstAndLast[1] = numbers[0]
+        : firstAndLast[1] = numbers[numbers.length - 1];
 
-    numbers.length === 0 ? (firstAndLast = []) : firstAndLast;
+    numbers.length === 0 ? firstAndLast = [] : firstAndLast;
     return firstAndLast;
 }
 
@@ -154,7 +154,7 @@ export function injectPositive(values: number[]): number[] {
     let myVals = [...values];
     indOfNeg !== -1
         ? myVals.splice(indOfNeg + 1, 0, sum)
-        : (myVals = [...values, sum]);
+        : myVals = [...values, sum];
 
     return myVals;
 }
