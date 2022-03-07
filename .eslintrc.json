@@ -36,14 +36,10 @@
             "warn",
             "all",
             {
-<<<<<<< HEAD
-                "nestedBinaryExpressions": false
-=======
                 "nestedBinaryExpressions": false,
                 "returnAssign": false,
                 "enforceForArrowConditionals": false,
                 "ignoreJSX": "all"
->>>>>>> upstream/task-state
             }
         ],
         "brace-style": ["error", "1tbs"],
