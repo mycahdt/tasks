@@ -17,6 +17,7 @@ export function CheckAnswer({
     function updateCorrectness(event: ChangeEvent) {
         setGivenAnswer(event.target.value);
     }
+
     //This is the View
     return (
         <div>
