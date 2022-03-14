@@ -7,45 +7,84 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
+PASS src/form-components/CheckAnswer.test.tsx
+PASS src/form-components/EditMode.test.tsx
 PASS src/components/ChangeType.test.tsx
 PASS src/components/CycleHoliday.test.tsx
+PASS src/form-components/GiveAttempts.test.tsx
+  ● Console
+
+    console.error
+      Error: Expected key descriptor but found "" in ""
+          See https://github.com/testing-library/user-event/blob/main/README.md#keyboardtext-options
+          for more information about how userEvent parses your input.
+          at assertDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:140:11)
+          at readPrintableChar (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:98:3)
+          at readNextDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:92:23)
+          at getNextKeyDef (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:53:7)
+          at keyboardImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/keyboardImplementation.js:38:106)
+          at keyboardImplementationWrapper (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/index.js:55:65)
+          at typeImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/typeImplementation.js:49:51)
+          at Object.type (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/index.js:27:60)
+          at Object.<anonymous> (/home/runner/work/tasks/tasks/src/form-components/GiveAttempts.test.tsx:42:19)
+          at Promise.then.completed (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:218:40)
+          at _runTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:155:3)
+          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:475:34)
+
+PASS src/form-components/ChangeColor.test.tsx
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
 PASS src/App.test.tsx
---------------------|---------|----------|---------|---------|-------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------|---------|----------|---------|---------|-------------------
-All files           |     100 |    98.68 |     100 |     100 |                   
- src                |     100 |      100 |     100 |     100 |                   
-  App.tsx           |     100 |      100 |     100 |     100 |                   
-  arrays.ts         |     100 |      100 |     100 |     100 |                   
-  functions.ts      |     100 |      100 |     100 |     100 |                   
-  nested.ts         |     100 |      100 |     100 |     100 |                   
-  objects.ts        |     100 |      100 |     100 |     100 |                   
- src/bad-components |     100 |       50 |     100 |     100 |                   
-  ChooseTeam.tsx    |     100 |       50 |     100 |     100 | 18                
-  ColoredBox.tsx    |     100 |      100 |     100 |     100 |                   
-  DoubleHalf.tsx    |     100 |      100 |     100 |     100 |                   
-  ShoveBox.tsx      |     100 |      100 |     100 |     100 |                   
- src/components     |     100 |      100 |     100 |     100 |                   
-  ChangeType.tsx    |     100 |      100 |     100 |     100 |                   
-  Counter.tsx       |     100 |      100 |     100 |     100 |                   
-  CycleHoliday.tsx  |     100 |      100 |     100 |     100 |                   
-  RevealAnswer.tsx  |     100 |      100 |     100 |     100 |                   
-  StartAttempt.tsx  |     100 |      100 |     100 |     100 |                   
-  TwoDice.tsx       |     100 |      100 |     100 |     100 |                   
- src/interfaces     |       0 |        0 |       0 |       0 |                   
-  answer.ts         |       0 |        0 |       0 |       0 |                   
-  question.ts       |       0 |        0 |       0 |       0 |                   
---------------------|---------|----------|---------|---------|-------------------
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |     100 |     98.8 |     100 |     100 |                   
+ src                         |     100 |      100 |     100 |     100 |                   
+  App.tsx                    |     100 |      100 |     100 |     100 |                   
+  arrays.ts                  |     100 |      100 |     100 |     100 |                   
+  functions.ts               |     100 |      100 |     100 |     100 |                   
+  nested.ts                  |     100 |      100 |     100 |     100 |                   
+  objects.ts                 |     100 |      100 |     100 |     100 |                   
+ src/bad-components          |     100 |       50 |     100 |     100 |                   
+  ChooseTeam.tsx             |     100 |       50 |     100 |     100 | 18                
+  ColoredBox.tsx             |     100 |      100 |     100 |     100 |                   
+  DoubleHalf.tsx             |     100 |      100 |     100 |     100 |                   
+  ShoveBox.tsx               |     100 |      100 |     100 |     100 |                   
+ src/components              |     100 |      100 |     100 |     100 |                   
+  ChangeType.tsx             |     100 |      100 |     100 |     100 |                   
+  Counter.tsx                |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx           |     100 |      100 |     100 |     100 |                   
+  RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
+  TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
+ src/form-components         |     100 |      100 |     100 |     100 |                   
+  ChangeColor.tsx            |     100 |      100 |     100 |     100 |                   
+  CheckAnswer.tsx            |     100 |      100 |     100 |     100 |                   
+  EditMode.tsx               |     100 |      100 |     100 |     100 |                   
+  GiveAttempts.tsx           |     100 |      100 |     100 |     100 |                   
+  MultipleChoiceQuestion.tsx |     100 |      100 |     100 |     100 |                   
+ src/interfaces              |       0 |        0 |       0 |       0 |                   
+  answer.ts                  |       0 |        0 |       0 |       0 |                   
+  question.ts                |       0 |        0 |       0 |       0 |                   
+-----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 15 passed, 15 total
-Tests:       110 passed, 110 total
+Test Suites: 20 passed, 20 total
+Tests:       134 passed, 134 total
 Snapshots:   0 total
-Time:        11.799 s
+Time:        12.22 s
 Ran all test suites.
