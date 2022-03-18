@@ -15,47 +15,100 @@ PASS src/form-components/CheckAnswer.test.tsx
 PASS src/form-components/EditMode.test.tsx
 PASS src/components/ChangeType.test.tsx
 PASS src/components/CycleHoliday.test.tsx
-PASS src/form-components/GiveAttempts.test.tsx
+FAIL src/form-components/GiveAttempts.test.tsx
   ● Console
 
     console.error
-      Error: Expected key descriptor but found "" in ""
-          See https://github.com/testing-library/user-event/blob/main/README.md#keyboardtext-options
-          for more information about how userEvent parses your input.
-          at assertDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:140:11)
-          at readPrintableChar (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:98:3)
-          at readNextDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:92:23)
-          at getNextKeyDef (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:53:7)
-          at keyboardImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/keyboardImplementation.js:38:106)
-          at keyboardImplementationWrapper (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/index.js:55:65)
-          at typeImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/typeImplementation.js:49:51)
-          at Object.type (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/index.js:27:60)
-          at Object.<anonymous> (/home/runner/work/tasks/tasks/src/form-components/GiveAttempts.test.tsx:42:19)
-          at Promise.then.completed (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:391:28)
-          at new Promise (<anonymous>)
-          at callAsyncCircusFn (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:316:10)
-          at _callCircusTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:218:40)
-          at _runTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:155:3)
-          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:66:9)
-          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:60:9)
-          at run (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:25:3)
-          at runAndTransformResultsToJestFormat (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-          at jestAdapter (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-          at runTestInternal (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:389:16)
-          at runTest (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:475:34)
+      Warning: Received NaN for the `value` attribute. If this is expected, cast the value to a string.
+          at input
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormControl.js:27:3
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at GiveAttempts (/home/runner/work/tasks/tasks/src/form-components/GiveAttempts.tsx:10:45)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3492:7)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
+      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
+      at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
+      at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
+
+  ● GiveAttempts Component tests › Cannot gain blank amounts
+
+    TestingLibraryElementError: Unable to find an element with the text: /3/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"formAttempts"[39m
+            [36m>[39m
+              [0m Attempts Requested: [0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"formAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"NaN"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mgain[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0muse[0m
+          [36m</button>[39m
+          [36m<div>[39m
+            [0mCurrent Attempts: [0m
+            [0mNaN[0m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      42 |         fireEvent.change(amountToGive, { target: { value: "" } });
+      43 |         gain.click();
+    > 44 |         expect(screen.getByText(/3/i)).toBeInTheDocument();
+         |                       ^
+      45 |     });
+      46 | });
+      47 |
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:44:23)
 
 PASS src/form-components/ChangeColor.test.tsx
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
+PASS src/quizzer/Quizzer.test.tsx
 PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |     100 |     98.8 |     100 |     100 |                   
- src                         |     100 |      100 |     100 |     100 |                   
+All files                    |   99.57 |    97.67 |   99.18 |   99.56 |                   
+ src                         |   99.35 |    98.33 |   98.57 |   99.33 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
+  ShowHideTasks.tsx          |   66.66 |       50 |      50 |   66.66 | 60                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
   functions.ts               |     100 |      100 |     100 |     100 |                   
   nested.ts                  |     100 |      100 |     100 |     100 |                   
@@ -81,10 +134,74 @@ All files                    |     100 |     98.8 |     100 |     100 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |     100 |      100 |     100 |     100 |                   
+  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 20 passed, 20 total
-Tests:       134 passed, 134 total
+Summary of all failing tests
+FAIL src/form-components/GiveAttempts.test.tsx
+  ● GiveAttempts Component tests › Cannot gain blank amounts
+
+    TestingLibraryElementError: Unable to find an element with the text: /3/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"formAttempts"[39m
+            [36m>[39m
+              [0m Attempts Requested: [0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"formAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"NaN"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mgain[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0muse[0m
+          [36m</button>[39m
+          [36m<div>[39m
+            [0mCurrent Attempts: [0m
+            [0mNaN[0m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      42 |         fireEvent.change(amountToGive, { target: { value: "" } });
+      43 |         gain.click();
+    > 44 |         expect(screen.getByText(/3/i)).toBeInTheDocument();
+         |                       ^
+      45 |     });
+      46 | });
+      47 |
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:44:23)
+
+
+Test Suites: 1 failed, 20 passed, 21 total
+Tests:       1 failed, 134 passed, 135 total
 Snapshots:   0 total
-Time:        10.419 s
+Time:        10.547 s
 Ran all test suites.
