@@ -1,0 +1,116 @@
+[
+    {
+        "title": "Math Quiz",
+        "description": "This Math Quiz tests your knowledge of simple math operations.",
+        "id": "814f3533-26e8-404d-bd4a-94810ce4e35e",
+        "numQuestions": 3,
+        "questions": [
+            {
+                "id": 429354,
+                "name": "Addition Question",
+                "body": "What is 1+1?",
+                "type": "multiple_choice_question",
+                "options": ["0", "2", "4", "8"],
+                "expected": "2",
+                "points": 200,
+                "published": true
+            },
+            {
+                "id": 200927,
+                "name": "Subtraction Question",
+                "body": "What is 7-4?",
+                "type": "multiple_choice_question",
+                "options": ["10", "1", "5", "3"],
+                "expected": "3",
+                "points": 400,
+                "published": true
+            },
+            {
+                "id": 187762,
+                "name": "Multiplication Question",
+                "body": "What is 2*9?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "18",
+                "points": 600,
+                "published": true
+            }
+        ]
+    },
+    {
+        "title": "Solar System Quiz",
+        "description": "This quiz tests your knowledge about space.",
+        "id": "e7cb9bc6-3a08-4e2e-a931-b9e5fc18ae36",
+        "numQuestions": 3,
+        "questions": [
+            {
+                "id": 16393,
+                "name": "Planet Question",
+                "body": "What is the fourth closest planet to the Sun?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Mars",
+                "points": 700,
+                "published": true
+            },
+            {
+                "id": 933047,
+                "name": "Earth Rotation Question",
+                "body": "It takes the Earth 365 days to travel around the Sun.",
+                "type": "multiple_choice_question",
+                "options": ["True", "False"],
+                "expected": "True",
+                "points": 200,
+                "published": true
+            },
+            {
+                "id": 799399,
+                "name": "Sun Question",
+                "body": "The Sun is a _____.",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "star",
+                "points": 800,
+                "published": true
+            }
+        ]
+    },
+    {
+        "title": "Social Studies Quiz",
+        "description": "This quiz tests your knowledge about the United States government and its early history.",
+        "id": "22f1003e-d3ec-4257-9b7f-9ade03c9c0a0",
+        "numQuestions": 3,
+        "questions": [
+            {
+                "id": 548754,
+                "name": "President Question",
+                "body": "Who was the first president of the U.S.?",
+                "type": "multiple_choice_question",
+                "options": ["Joe Biden", "Bill Clinton", "George Washington", "Theodore Roosevelt"],
+                "expected": "George Washington",
+                "points": 300,
+                "published": true
+            },
+            {
+                "id": 621317,
+                "name": "State Question",
+                "body": "How many states are in the U.S.?",
+                "type": "multiple_choice_question",
+                "options": ["50", "51", "45", "46"],
+                "expected": "50",
+                "points": 100,
+                "published": true
+            },
+            {
+                "id": 653529,
+                "name": "Government Question",
+                "body": "Who was the first Secretary of the Treasury?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Alexander Hamilton",
+                "points": 1000,
+                "published": true
+            }
+        ]
+    }
+]

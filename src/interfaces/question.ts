@@ -1,3 +1,5 @@
+import { Publish } from "./publish";
+
 /** QuestionType influences how a question is asked and what kinds of answers are possible */
 export type QuestionType = "multiple_choice_question" | "short_answer_question";
 
@@ -18,5 +20,5 @@ export interface Question {
     /** How many points this question is worth, roughly indicating its importance and difficulty */
     points: number;
     /** Whether or not this question is ready to display to students */
-    published: boolean;
+    published: Publish;
 }
