@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 //import { ChangeType } from "./components/ChangeType";
 //import { RevealAnswer } from "./components/RevealAnswer";
@@ -19,8 +19,9 @@ import { Quizzer } from "./quizzer/Quizzer";
 //import { Button } from "react-bootstrap";
 import { ShowHideTasks } from "./ShowHideTasks";
 //import { Sketch } from "./quizzer/Sketch";
+import myQuizzes from "./data/my_quizzes.json";
+import { Quiz } from "./interfaces/quiz";
 
-function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
