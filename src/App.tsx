@@ -26,6 +26,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript Mycah Detorres
             </header>
+            <h1>Quiz Records</h1>
             <Quizzer></Quizzer>
             <hr></hr>
             <ShowHideTasks></ShowHideTasks>
