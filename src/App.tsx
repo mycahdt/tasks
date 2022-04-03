@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 //import { ChangeType } from "./components/ChangeType";
 //import { RevealAnswer } from "./components/RevealAnswer";
@@ -19,9 +19,10 @@ import { Quizzer } from "./quizzer/Quizzer";
 //import { Button } from "react-bootstrap";
 import { ShowHideTasks } from "./ShowHideTasks";
 //import { Sketch } from "./quizzer/Sketch";
-import myQuizzes from "./data/my_quizzes.json";
-import { Quiz } from "./interfaces/quiz";
+//import myQuizzes from "./data/my_quizzes.json";
+//import { Quiz } from "./interfaces/quiz";
 
+function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
@@ -29,8 +30,6 @@ import { Quiz } from "./interfaces/quiz";
             </header>
             <h1>Quiz Records</h1>
             <Quizzer></Quizzer>
-            <hr></hr>
-            <ShowHideTasks></ShowHideTasks>
             <hr></hr>
             <div>
                 <img
@@ -45,6 +44,9 @@ import { Quiz } from "./interfaces/quiz";
                     <li>Application is Sketched</li>
                 </ul>
             </div>
+            <hr></hr>
+            <ShowHideTasks></ShowHideTasks>
+            <hr></hr>
         </div>
     );
 }

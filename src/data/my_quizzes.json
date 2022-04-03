@@ -6,7 +6,8 @@
         "numQuestions": 3,
         "questions": [
             {
-                "id": 429354,
+                "title": "Addition Question",
+                "id": "429354",
                 "name": "Addition Question",
                 "body": "What is 1+1?",
                 "type": "multiple_choice_question",
@@ -16,7 +17,8 @@
                 "published": true
             },
             {
-                "id": 200927,
+                "title": "Subtraction Question",
+                "id": "200927",
                 "name": "Subtraction Question",
                 "body": "What is 7-4?",
                 "type": "multiple_choice_question",
@@ -26,7 +28,8 @@
                 "published": true
             },
             {
-                "id": 187762,
+                "title": "Multiplication Question",
+                "id": "187762",
                 "name": "Multiplication Question",
                 "body": "What is 2*9?",
                 "type": "short_answer_question",
@@ -44,7 +47,8 @@
         "numQuestions": 3,
         "questions": [
             {
-                "id": 16393,
+                "title": "Planet Question",
+                "id": "16393",
                 "name": "Planet Question",
                 "body": "What is the fourth closest planet to the Sun?",
                 "type": "short_answer_question",
@@ -54,7 +58,8 @@
                 "published": true
             },
             {
-                "id": 933047,
+                "title": "Earth Rotation Question",
+                "id": "933047",
                 "name": "Earth Rotation Question",
                 "body": "It takes the Earth 365 days to travel around the Sun.",
                 "type": "multiple_choice_question",
@@ -64,7 +69,8 @@
                 "published": true
             },
             {
-                "id": 799399,
+                "title": "Sun Question",
+                "id": "799399",
                 "name": "Sun Question",
                 "body": "The Sun is a _____.",
                 "type": "short_answer_question",
@@ -82,7 +88,8 @@
         "numQuestions": 3,
         "questions": [
             {
-                "id": 548754,
+                "title": "President Question",
+                "id": "548754",
                 "name": "President Question",
                 "body": "Who was the first president of the U.S.?",
                 "type": "multiple_choice_question",
@@ -92,7 +99,8 @@
                 "published": true
             },
             {
-                "id": 621317,
+                "title": "State Question",
+                "id": "621317",
                 "name": "State Question",
                 "body": "How many states are in the U.S.?",
                 "type": "multiple_choice_question",
@@ -102,7 +110,8 @@
                 "published": true
             },
             {
-                "id": 653529,
+                "title": "Government Question",
+                "id": "653529",
                 "name": "Government Question",
                 "body": "Who was the first Secretary of the Treasury?",
                 "type": "short_answer_question",
