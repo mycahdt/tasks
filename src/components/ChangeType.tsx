@@ -1,10 +1,10 @@
-/*
+
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { QuestionType } from "../interfaces/question";
+//import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
-    const [type, setType] = useState<QuestionType>("short_answer_question");
+    const [type, setType] = useState<string>("short_answer_question");
 
     function changeType(): void {
         setType(
@@ -26,4 +26,4 @@ export function ChangeType(): JSX.Element {
             )}
         </div>
     );
-}*/
+}
