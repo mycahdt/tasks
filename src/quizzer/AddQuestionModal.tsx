@@ -1,42 +1,33 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Question } from "../interfaces/question";
-import { Quiz } from "../interfaces/quiz";
+//import { Quiz } from "../interfaces/quiz";
 //import { EditableQuestionList } from "./EditableQuestionList";
 
-export function AddQuizModal({
+export function AddQuestionModal({
     show,
     handleClose,
-    addQuiz
+    addQuestion
 }: {
     show: boolean;
     handleClose: () => void;
-    addQuiz: (newQuiz: Quiz) => void;
+    addQuestion: (newQuestion: Question) => void;
 }) {
     const [id, setId] = useState<string>("");
     const [title, setTitle] = useState<string>("");
-    const [description, setDescription] = useState<string>("");
-    const questions = ["", ""];
+    const [body, setBody] = useState<string>("");
 
     function saveChanges() {
-        addQuiz({
+        addQuestion({
             title: title,
-            description: description,
             id: id,
-            numQuestions: 0,
-            questions: questions.map(
-                (question: string): Question => ({
-                    title: "",
-                    id: question,
-                    name: "",
-                    body: "",
-                    type: "",
-                    options: ["", ""],
-                    expected: "",
-                    points: 0,
-                    published: true
-                })
-            )
+            name: title,
+            body: body,
+            type: "",
+            options: ["", ""],
+            expected: "",
+            points: 0,
+            published: true
         });
         handleClose();
     }
@@ -44,13 +35,13 @@ export function AddQuizModal({
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Add New Quiz</Modal.Title>
+                <Modal.Title>Add New Question</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {/* ID */}
-                <Form.Group controlId="formQuizId" as={Row}>
+                <Form.Group controlId="formQuestionId" as={Row}>
                     <Form.Label column sm={5}>
-                        ID of New Quiz:
+                        ID of New Question:
                     </Form.Label>
                     <Col>
                         <Form.Control
@@ -62,9 +53,9 @@ export function AddQuizModal({
                     </Col>
                 </Form.Group>
                 {/* Title */}
-                <Form.Group controlId="formQuizTitle" as={Row}>
+                <Form.Group controlId="formQuestionTitle" as={Row}>
                     <Form.Label column sm={5}>
-                        Title of New Quiz:
+                        Title of New Question:
                     </Form.Label>
                     <Col>
                         <Form.Control
@@ -75,17 +66,17 @@ export function AddQuizModal({
                         />
                     </Col>
                 </Form.Group>
-                {/* Description */}
-                <Form.Group controlId="formQuizDescription" as={Row}>
+                {/* Body */}
+                <Form.Group controlId="formQuesitonBody" as={Row}>
                     <Form.Label column sm={5}>
-                        Description of New Quiz:
+                        Body of New Question:
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={description}
+                            value={body}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setDescription(event.target.value)}
+                            ) => setBody(event.target.value)}
                         />
                     </Col>
                 </Form.Group>

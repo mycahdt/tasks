@@ -1,7 +1,7 @@
 [
     {
         "title": "Math Quiz",
-        "description": "This Math Quiz tests your knowledge of simple math operations.",
+        "description": "This Quiz tests your knowledge of simple Math operations.",
         "id": "814f3533-26e8-404d-bd4a-94810ce4e35e",
         "numQuestions": 3,
         "questions": [
@@ -11,7 +11,7 @@
                 "name": "Addition Question",
                 "body": "What is 1+1?",
                 "type": "multiple_choice_question",
-                "options": ["0", "2", "4", "8"],
+                "options": ["2", "0", "4", "8"],
                 "expected": "2",
                 "points": 200,
                 "published": true
@@ -104,7 +104,7 @@
                 "name": "State Question",
                 "body": "How many states are in the U.S.?",
                 "type": "multiple_choice_question",
-                "options": ["50", "51", "45", "46"],
+                "options": ["46", "51", "45", "50"],
                 "expected": "50",
                 "points": 100,
                 "published": true

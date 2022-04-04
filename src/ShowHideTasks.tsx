@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ChangeType } from "./components/ChangeType";
+//import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
@@ -52,7 +52,6 @@ export function ShowHideTasks(): JSX.Element {
                     <hr />
                     <TwoDice></TwoDice>
                     <hr />
-                    <ChangeType></ChangeType>
                     <hr />
                     <CycleHoliday></CycleHoliday>
                 </div>

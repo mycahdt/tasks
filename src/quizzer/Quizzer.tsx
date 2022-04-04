@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import my_quizzes from "../data/my_quizzes.json";
-import { Question } from "../interfaces/question";
 import { Quiz } from "../interfaces/quiz";
 import { AddQuizModal } from "./AddQuizModal";
 import { QuizList } from "./QuizList";
@@ -20,13 +19,14 @@ export function Quizzer(): JSX.Element {
     /**See Quiz makes the questions hidden, and
      * allows you to see the quiz after clicking the button
      */
+    /*
     function seeQuiz(id: string, newQuiz: Quiz) {
         setQuizzes(
             quizzes.map(
                 (myQuiz: Quiz): Quiz => (myQuiz.id === id ? newQuiz : myQuiz)
             )
         );
-    }
+    }*/
 
     function deleteQuiz(id: string) {
         setQuizzes(quizzes.filter((myQuiz: Quiz): boolean => myQuiz.id !== id));
@@ -41,24 +41,24 @@ export function Quizzer(): JSX.Element {
         }
     }
 
+    function editQuiz(id: string, newQuiz: Quiz) {
+        setQuizzes(
+            quizzes.map((quiz: Quiz): Quiz => (quiz.id === id ? newQuiz : quiz))
+        );
+    }
+
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
     return (
         <div>
+            <h1>Quiz Records</h1>
             <h3>Quizzer</h3>
-            <ol>
-                {quizzes.map(
-                    (theQuiz: Quiz): JSX.Element => (
-                        <li key={theQuiz.id}>{theQuiz.title}</li>
-                    )
-                )}
-            </ol>
             <div>
                 <QuizList
                     quizzes={quizzes}
-                    seeQuiz={seeQuiz}
                     deleteQuiz={deleteQuiz}
+                    editQuiz={editQuiz}
                 ></QuizList>
             </div>
             <div>
@@ -67,7 +67,7 @@ export function Quizzer(): JSX.Element {
                     className="m-4"
                     onClick={handleShowAddModal}
                 >
-                    Add New Movie
+                    Add New Quiz
                 </Button>
                 <AddQuizModal
                     show={showAddModal}

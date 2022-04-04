@@ -28,7 +28,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript Mycah Detorres
             </header>
-            <h1>Quiz Records</h1>
             <Quizzer></Quizzer>
             <hr></hr>
             <div>
@@ -42,6 +41,32 @@ function App(): JSX.Element {
                 Completed Features:
                 <ul>
                     <li>Application is Sketched</li>
+                    <li>
+                        Users can see a list of quizzes, including the quizzes
+                        title, description, and how many questions it has
+                    </li>
+                    <li>
+                        Users can select a specific quiz to see the questions,
+                        including the questions name, body, and points
+                    </li>
+                    <li>
+                        Quiz questions can be of AT LEAST two types: a short
+                        answer question or multiple choice question
+                    </li>
+                    <li>
+                        Users can enter or choose an answer for a quiz question,
+                        and be told if they are correct
+                    </li>
+                    <li>Users can publish or unpublish a question</li>
+                    <li>
+                        Users can filter the questions in a list so that only
+                        published questions are shown
+                    </li>
+                    <li>Users can edit the questions and fields of a quiz</li>
+                    <li>Users can add a new quiz question</li>
+                    <li>Users can delete an existing quiz question</li>
+                    <li>Users can add a new quiz</li>
+                    <li>Users can delete an existing quiz</li>
                 </ul>
             </div>
             <hr></hr>

@@ -6,11 +6,11 @@ import { QuizView } from "./QuizView";
 export function QuizList({
     quizzes,
     deleteQuiz,
-    seeQuiz
+    editQuiz
 }: {
     quizzes: Quiz[];
     deleteQuiz: (id: string) => void;
-    seeQuiz: (id: string, newQuiz: Quiz) => void;
+    editQuiz: (id: string, newQuiz: Quiz) => void;
 }): JSX.Element {
     return (
         <Stack gap={3}>
@@ -19,7 +19,7 @@ export function QuizList({
                     <QuizView
                         quiz={quiz}
                         deleteQuiz={deleteQuiz}
-                        seeQuiz={seeQuiz}
+                        editQuiz={editQuiz}
                     ></QuizView>
                 </div>
             ))}
