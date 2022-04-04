@@ -2,14 +2,14 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/nested.test.ts
 PASS src/arrays.test.ts
-PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/quizzer/MultipleCQuestion.test.tsx
 PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
+PASS src/quizzer/ShortAnsQuestions.test.tsx
 PASS src/functions.test.ts
 PASS src/form-components/CheckAnswer.test.tsx
 PASS src/form-components/EditMode.test.tsx
@@ -105,14 +105,12 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   99.57 |    97.67 |   99.18 |   99.56 |                   
- src                         |   99.35 |    98.33 |   98.57 |   99.33 |                   
+All files                    |   69.32 |    73.03 |   63.38 |   70.12 |                   
+ src                         |   98.55 |    97.14 |   96.42 |   98.48 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
-  ShowHideTasks.tsx          |   66.66 |       50 |      50 |   66.66 | 60                
+  ShowHideTasks.tsx          |   66.66 |       50 |      50 |   66.66 | 59                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
   functions.ts               |     100 |      100 |     100 |     100 |                   
-  nested.ts                  |     100 |      100 |     100 |     100 |                   
-  objects.ts                 |     100 |      100 |     100 |     100 |                   
  src/bad-components          |     100 |       50 |     100 |     100 |                   
   ChooseTeam.tsx             |     100 |       50 |     100 |     100 | 18                
   ColoredBox.tsx             |     100 |      100 |     100 |     100 |                   
@@ -133,9 +131,22 @@ All files                    |   99.57 |    97.67 |   99.18 |   99.56 |
   MultipleChoiceQuestion.tsx |     100 |      100 |     100 |     100 |                   
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
+  publish.ts                 |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |     100 |      100 |     100 |     100 |                   
-  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
+  quiz.ts                    |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |      24 |    21.42 |   17.74 |   25.26 |                   
+  AddQuestionModal.tsx       |       0 |      100 |       0 |       0 | 16-79             
+  AddQuizModal.tsx           |   45.45 |      100 |   16.66 |   45.45 | 22-41,60-88       
+  MultipleCQuestion.tsx      |     100 |      100 |     100 |     100 |                   
+  QuestionEditor.tsx         |       0 |        0 |       0 |       0 | 16-107            
+  QuestionList.tsx           |       0 |        0 |       0 |       0 | 19-34             
+  QuestionView.tsx           |       0 |        0 |       0 |       0 | 18-24             
+  Questioner.tsx             |       0 |        0 |       0 |       0 | 20-71             
+  QuizEditor.tsx             |       0 |        0 |       0 |       0 | 16-92             
+  QuizList.tsx               |     100 |      100 |     100 |     100 |                   
+  QuizView.tsx               |      60 |       50 |   33.33 |      60 | 21,65             
+  Quizzer.tsx                |   41.17 |        0 |      20 |      50 | 32-46             
+  ShortAnsQuestion.tsx       |     100 |      100 |     100 |     100 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Summary of all failing tests
@@ -201,7 +212,7 @@ FAIL src/form-components/GiveAttempts.test.tsx
 
 
 Test Suites: 1 failed, 20 passed, 21 total
-Tests:       1 failed, 134 passed, 135 total
+Tests:       1 failed, 120 passed, 121 total
 Snapshots:   0 total
-Time:        10.547 s
+Time:        17.596 s
 Ran all test suites.
